@@ -1,0 +1,29 @@
+header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  background-color: blue;
+  margin: 0;
+  padding: 10px;
+  color: white; }
+  header ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    justify-content: space-between; }
+    header ul a {
+      color: white; }
+    header ul a:link {
+      text-decoration: none; }
+    header ul a:visited {
+      text-decoration: none; }
+    header ul a:hover {
+      text-decoration: none; }
+    header ul a:active {
+      text-decoration: none; }
+    header ul li button {
+      background-color: #0000a5;
+      height: 30px;
+      width: 80px;
+      border-radius: 5px; }
