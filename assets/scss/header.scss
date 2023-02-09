@@ -27,11 +27,16 @@ header{
         a:active { text-decoration: none; }
 
         li{
+            userName{
+                font-size: xx-large;
+                font-family: cursive;
+            }
             button{
-                background-color: rgb(0, 0, 165);
-                height: 30px;
-                width: 80px;
-                border-radius: 5px;
+                font-size: larger;
+                background-color: rgba(0, 0, 165, 0.644);
+                height: 50px;
+                width: 100px;
+                border-radius: 25px 5px 25px 5px;
 
             }
         }

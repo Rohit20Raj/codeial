@@ -22,8 +22,12 @@ header {
       text-decoration: none; }
     header ul a:active {
       text-decoration: none; }
+    header ul li userName {
+      font-size: xx-large;
+      font-family: cursive; }
     header ul li button {
-      background-color: #0000a5;
-      height: 30px;
-      width: 80px;
-      border-radius: 5px; }
+      font-size: larger;
+      background-color: rgba(0, 0, 165, 0.644);
+      height: 50px;
+      width: 100px;
+      border-radius: 25px 5px 25px 5px; }
