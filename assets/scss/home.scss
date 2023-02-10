@@ -1,3 +1,30 @@
+#feed-posts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20vw;
+    font-size: larger;
+}
+
+#new-post-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+textarea{
+    border-radius: 20px;
+    height: 50px;
+    padding: 16px;
+}
+
+input{
+    height: 40px;
+    width: 64px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
 #posts-list-container{
     display: flex;
     flex-direction: column;
@@ -5,5 +32,5 @@
 }
 
 #posts-list{
-    list-style: none;
+    list-style:square;
 }
