@@ -11,33 +11,36 @@
 </head>
 
 <body>
-    
+
     <section id="feed-posts">
         <h1>
             CODEIAL | <%= title %>
         </h1>
-        <h4>Posts</h4>
+        <!-- <h4>Posts</h4> -->
         <% if (locals.user) { %>
             <form action="/posts/create" id="new-post-form" method="post">
                 <textarea name="content" cols="50" rows="1" placeholder="Enter your thoughts..."></textarea>
                 <input type="submit" value="Post">
             </form>
-        <% } %>
+            <% } %>
 
-        <div id="posts-list-container">
-            <ul id="posts-list">
-                <% for(post of posts){ %>
-                    <li>
-                        <%= post.content %>
-                            <small>
-                                <u>
-                                    ~<%= post.user.name %>
-                                </u>
-                            </small>
-                    </li>
-                    <%} %>
-            </ul>
-        </div>
+                <div id="posts-list-container">
+                    <ul id="posts-list">
+                        <% for(post of posts){ %>
+                            <li id="user-post">
+                                <div id="post-content">
+                                    <%= post.content %>
+                                </div>
+                                <small>
+                                    ~
+                                    <u>
+                                        <%= post.user.name %>
+                                    </u>
+                                </small>
+                            </li>
+                            <%} %>
+                    </ul>
+                </div>
     </section>
 </body>
 
