@@ -31,12 +31,33 @@
                                 <div id="post-content">
                                     <%= post.content %>
                                 </div>
-                                <small>
-                                    ~
-                                    <u>
-                                        <%= post.user.name %>
-                                    </u>
-                                </small>
+                                <span id="post_user_name">
+                                    ~<%= post.user.name %>
+                                </span>
+                                <div class="post-comments">
+                                    <% if(locals.user){ %>
+                                        <form action="/comments/create" method="POST">
+                                            <input id="comment" type="text" name="content"
+                                                placeholder="Comment on this post...">
+                                            <input type="hidden" name="post" value="<%= post._id %>">
+                                            <input id="submit-comment" type="submit" value="+">
+                                        </form>
+                                        <% } %>
+
+                                        <div class="post-comments-list">
+                                            <ul id="post-comment-<%=post._id %>">
+                                                <% for(comment of post.comments){%>
+                                                    <p>
+                                                        <%= comment.content %>
+                                                        <br>
+                                                        <small>
+                                                            <%= comment.user.name %>
+                                                        </small>
+                                                    </p>
+                                                <% } %>
+                                            </ul>
+                                        </div>
+                                </div>
                             </li>
                             <%} %>
                     </ul>

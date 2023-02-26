@@ -53,11 +53,27 @@ input{
     border-radius: 0 0 0 15px;
 }
 
-small{
-    display: flex;
-}
-
 #user-post{
     display: flex;
     padding: 10px;
+}
+
+#post_user_name{
+    font-size: small;
+    height: 0;
+
+}
+.post-comments{
+    display: block;
+}
+.post-comments form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 50%;
+    gap: 10px;
+}
+#submit-comment{
+    width: 100px;
 }

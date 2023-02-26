@@ -65,5 +65,5 @@ app.listen(port, function(err){
     if(err){
         console.log(`Error in running the server: ${err}`);
     }
-    console.log(`Server running successfully at http://localhost:${port}/`);
+    console.log(`Server running successfully at http://127.0.0.1:${port}/`);
 });
