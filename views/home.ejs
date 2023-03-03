@@ -11,58 +11,38 @@
 </head>
 
 <body>
+    <h1>
+        CODEIAL | <%= title %>
+    </h1>
+    <!-- <h4>Posts</h4> -->
+    <% if (locals.user) { %>
+        <form action="/posts/create" id="new-post-form" method="post">
+            <textarea name="content" cols="50" rows="1" placeholder="Enter your thoughts..."></textarea>
+            <input type="submit" value="Post">
+        </form>
+        <% } %>
 
-    <section id="feed-posts">
-        <h1>
-            CODEIAL | <%= title %>
-        </h1>
-        <!-- <h4>Posts</h4> -->
-        <% if (locals.user) { %>
-            <form action="/posts/create" id="new-post-form" method="post">
-                <textarea name="content" cols="50" rows="1" placeholder="Enter your thoughts..."></textarea>
-                <input type="submit" value="Post">
-            </form>
-            <% } %>
-
-                <div id="posts-list-container">
-                    <ul id="posts-list">
-                        <% for(post of posts){ %>
-                            <li id="user-post">
-                                <div id="post-content">
-                                    <%= post.content %>
-                                </div>
-                                <span id="post_user_name">
-                                    ~<%= post.user.name %>
-                                </span>
-                                <div class="post-comments">
-                                    <% if(locals.user){ %>
-                                        <form action="/comments/create" method="POST">
-                                            <input id="comment" type="text" name="content"
-                                                placeholder="Comment on this post...">
-                                            <input type="hidden" name="post" value="<%= post._id %>">
-                                            <input id="submit-comment" type="submit" value="+">
-                                        </form>
-                                        <% } %>
-
-                                        <div class="post-comments-list">
-                                            <ul id="post-comment-<%=post._id %>">
-                                                <% for(comment of post.comments){%>
-                                                    <p>
-                                                        <%= comment.content %>
-                                                        <br>
-                                                        <small>
-                                                            <%= comment.user.name %>
-                                                        </small>
-                                                    </p>
-                                                <% } %>
-                                            </ul>
-                                        </div>
-                                </div>
-                            </li>
-                            <%} %>
-                    </ul>
-                </div>
-    </section>
+    <div class="home">
+        <section id="feed-posts">
+    
+                    <div id="posts-list-container">
+                        <ul id="posts-list">
+                            <% for(post of posts){ %>
+                                <%-include('_posts')-%>
+                                <%} %>
+                        </ul>
+                    </div>
+        </section>
+    
+        <section id="user-friends">
+            <h2>Friends</h2>
+            <% for(u of all_user){ %>
+                <p>
+                    <a href="/user/profile/<%= u.id %>"><%= u.name %></a>
+                </p>
+                <% } %>
+        </section>
+    </div>
 </body>
 
 </html>

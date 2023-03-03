@@ -1,3 +1,9 @@
+.home{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+}
 h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -43,6 +49,8 @@ input{
 }
 
 #post-content{
+    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
     height: 20px;
     width: 500px;
@@ -55,10 +63,13 @@ input{
 
 #user-post{
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 10px;
 }
 
 #post_user_name{
+    display: block;
     font-size: small;
     height: 0;
 
@@ -76,4 +87,15 @@ input{
 }
 #submit-comment{
     width: 100px;
+}
+#comment-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+}
+
+#user-friends{
+    display: flex;
+    flex-direction: column;
 }

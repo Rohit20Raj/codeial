@@ -1,9 +1,11 @@
 header {
+  position: sticky;
+  top: 0;
   width: 99%;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  background-image: linear-gradient(blue, white);
+  background-color: blue;
   margin: 0;
   padding: 10px;
   color: white; }
