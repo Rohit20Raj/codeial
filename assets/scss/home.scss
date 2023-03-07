@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -12,8 +12,9 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 20vw;
+    // margin-left: 5vw;
     font-size: larger;
+    border-right: 5px solid black;
 }
 
 #new-post-form{
@@ -21,7 +22,9 @@ h1{
     justify-content: center;
     align-items: center;
 }
-
+.delete-post{
+    background-image: url(../images/delete.svg);
+}
 textarea{
     border-radius: 20px;
     height: 50px;
@@ -98,4 +101,5 @@ input{
 #user-friends{
     display: flex;
     flex-direction: column;
+    // border-left: 5px solid black;
 }

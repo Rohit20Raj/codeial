@@ -77,14 +77,16 @@ module.exports.create = function(req, res){
 
 module.exports.createSession = function(req, res){
     //TODO later
+    // req.flash('success', 'Logged In successfully');
     return res.redirect('/');
 }
 
 module.exports.destroySession = function(req, res, next){
     req.logout(function(err){
-        if(err){return next(err);}
-        res.redirect('/');
+        if(err){
+            return next(err);
+        }
     });
-
+    // req.flash('success', 'Logged Out successfully');
     return res.redirect('/');
 }
